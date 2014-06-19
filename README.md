@@ -10,6 +10,8 @@
 
 * * *
 
+*fonksyonèl is based on the article [functional coffeescript for the impatient](http://cedricruiz.me/blog/functional-coffeescript-for-the-impatient/) by [Cedric Ruiz](http://cedricruiz.me).*
+
 ## Getting Started
 
 Install the module with: `npm install fonksyonel`
