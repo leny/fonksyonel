@@ -69,7 +69,7 @@ module.exports = ( grunt ) ->
     grunt.registerTask "default", [
         "coffeelint"
         "coffee"
-        "test"
+        "nodeunit"
     ]
 
     grunt.registerTask "test", [
