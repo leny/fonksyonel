@@ -17,3 +17,6 @@ exports.nop = nop = ->
 
 # id, an identity function
 exports.id = id = ( mArg ) -> mArg
+
+# builtin, turn a native function into a regular function
+exports.builtin = builtin = ( fFunction ) -> nop.call.bind fFunction

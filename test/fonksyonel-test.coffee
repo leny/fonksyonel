@@ -30,7 +30,7 @@
 
 fn = require "../lib/fonksyonel.js"
 
-exports.awesome =
+exports.essentials =
     setUp: ( done ) ->
         done()
 
@@ -42,4 +42,9 @@ exports.awesome =
         test.equal fn.id( 2 ), 2, "should be 2."
         test.equal fn.id( null ), null, "should be null."
         test.equal fn.id( "yo" ), "yo", "should be \"yo\"."
+        test.done()
+
+    "builtin": ( test ) ->
+        toArray = -> fn.builtin( Array::slice )( arguments )
+        test.deepEqual toArray( 1, 2, 3 ), [ 1, 2, 3 ], "should be [ 1, 2, 3 ]."
         test.done()
