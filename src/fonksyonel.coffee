@@ -8,5 +8,12 @@
 
 "use strict"
 
-exports.awesome = ->
-    "awesome"
+undf = undefined
+
+# --- essentials
+
+# nop, an empty function
+exports.nop = nop = ->
+
+# id, an identity function
+exports.id = id = ( mArg ) -> mArg

@@ -28,15 +28,18 @@
 
 "use strict"
 
-fonksyonel = require "../lib/fonksyonel.js"
+fn = require "../lib/fonksyonel.js"
 
 exports.awesome =
     setUp: ( done ) ->
         done()
 
-    "no args": ( test ) ->
-        test.expect 1
+    "nop": ( test ) ->
+        test.equal fn.nop(), undefined, "should do nothing."
+        test.done()
 
-        test.equal fonksyonel.awesome(), "awesome", "should be awesome."
-
+    "id": ( test ) ->
+        test.equal fn.id( 2 ), 2, "should be 2."
+        test.equal fn.id( null ), null, "should be null."
+        test.equal fn.id( "yo" ), "yo", "should be \"yo\"."
         test.done()
