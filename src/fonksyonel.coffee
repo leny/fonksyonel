@@ -29,4 +29,5 @@ exports.apply = apply = ( fFunction, aArguments... ) -> fFunction Array::concat.
 
 # --- higher-order
 
+# notF, a function that returns the opposite of the given function
 exports.notF = notF = ( fFunction ) -> ( aArguments... ) -> not fFunction aArguments...
