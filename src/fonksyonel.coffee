@@ -23,3 +23,6 @@ exports.builtin = builtin = ( fFunction ) -> nop.call.bind fFunction
 
 # variadic, returns arguments as array
 exports.variadic = variadic = ( aArguments... ) -> aArguments
+
+# apply, a normalize version of Function::apply
+exports.apply = apply = ( fFunction, aArguments... ) -> fFunction Array::concat.apply( [], aArguments )...

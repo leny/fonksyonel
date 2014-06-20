@@ -52,3 +52,7 @@ exports.essentials =
     "variadic": ( test ) ->
         test.deepEqual fn.variadic( 1, 2, 3 ), [ 1, 2, 3 ], "should be [ 1, 2, 3 ]."
         test.done()
+
+    "apply": ( test ) ->
+        test.equal fn.apply( Math.max, [ 1, 2, 3 ] ), 3, "should be 3."
+        test.done()
