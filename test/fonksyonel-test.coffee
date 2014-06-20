@@ -48,3 +48,7 @@ exports.essentials =
         toArray = -> fn.builtin( Array::slice )( arguments )
         test.deepEqual toArray( 1, 2, 3 ), [ 1, 2, 3 ], "should be [ 1, 2, 3 ]."
         test.done()
+
+    "variadic": ( test ) ->
+        test.deepEqual fn.variadic( 1, 2, 3 ), [ 1, 2, 3 ], "should be [ 1, 2, 3 ]."
+        test.done()
