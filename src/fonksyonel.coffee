@@ -26,3 +26,7 @@ exports.variadic = variadic = ( aArguments... ) -> aArguments
 
 # apply, a normalize version of Function::apply
 exports.apply = apply = ( fFunction, aArguments... ) -> fFunction Array::concat.apply( [], aArguments )...
+
+# --- higher-order
+
+exports.notF = notF = ( fFunction ) -> ( aArguments... ) -> not fFunction aArguments...

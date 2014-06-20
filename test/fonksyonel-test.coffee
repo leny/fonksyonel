@@ -56,3 +56,15 @@ exports.essentials =
     "apply": ( test ) ->
         test.equal fn.apply( Math.max, [ 1, 2, 3 ] ), 3, "should be 3."
         test.done()
+
+exports[ "higher-order" ] =
+    setUp: ( done ) ->
+        done()
+
+    "notF": ( test ) ->
+        isTruthy = ( x ) -> !!x is true
+        isFalsy = fn.notF isTruthy
+        test.equal isTruthy( 3 ), true, "should be true."
+        test.equal isFalsy( 3 ), false, "should be false."
+        test.equal isFalsy( 0 ), true, "should be true."
+        test.done()
